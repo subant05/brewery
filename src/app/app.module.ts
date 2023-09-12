@@ -38,6 +38,7 @@ import { FilterComponent } from './components/filter/filter.component';
     BreweriesComponent,
     FilterComponent,
   ],
+  
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
