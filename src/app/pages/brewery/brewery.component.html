@@ -1,0 +1,30 @@
+<mat-card class="example-card" *ngIf="brewery; else nobrewery">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{brewery.name}}</mat-card-title>
+    <mat-card-subtitle>
+      <a [href]="brewery.website_url">
+        {{brewery.website_url}}
+      </a>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://res.cloudinary.com/adrenalinecomau/image/upload/q_auto,f_auto/v1558496079/adventures/eps_3241.jpg" [alt]="brewery.name"/>
+  <mat-card-content>
+    <p>
+      <mat-list>
+        <mat-list-item><b>Address 1:</b> {{brewery.address_1}}</mat-list-item>
+        <mat-list-item><b>Address 2:</b> {{brewery.address_2}}</mat-list-item>
+        <mat-list-item><b>Address 3:</b> {{brewery.address_3}}</mat-list-item>
+        <mat-list-item><b>City:</b> {{brewery.city}}</mat-list-item>
+        <mat-list-item><b>State:</b> {{brewery.state_province}}</mat-list-item>
+        <mat-list-item><b>Zip Code:</b> {{brewery.postal_code}}</mat-list-item>
+        <mat-list-item><b>Country:</b> {{brewery.country}}</mat-list-item>
+        <mat-list-item><b>Phone:</b> {{brewery.phone}}</mat-list-item>
+       </mat-list>
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<ng-template #nobrewery>
+  No brewery found
+</ng-template>

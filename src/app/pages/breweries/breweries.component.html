@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="list">
+    <mat-list role="list">
+
+      <div *ngFor="let brewery of breweries" 
+        (click)="onListItemClick(brewery)"
+        (dblclick)="onListItemDoubleClick(brewery)"
+        >
+          <mat-list-item role="listitem">
+              <mat-icon>sports_bar</mat-icon>
+              <span>{{brewery.name}}</span> 
+          </mat-list-item>
+        <mat-divider></mat-divider>
+      </div>
+
+    </mat-list>
+  </div>
+  <div class="map">
+    <agm-map 
+      [latitude]="currentBrewery.latitude" 
+      [longitude]="currentBrewery.longitude"
+      [zoom]="4">
+      <agm-marker 
+         [openInfoWindow]="true"
+        [latitude]="currentBrewery.latitude" 
+        [longitude]="currentBrewery.longitude"></agm-marker>
+    </agm-map>
+  </div>
+</div>

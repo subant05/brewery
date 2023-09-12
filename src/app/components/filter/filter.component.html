@@ -1,0 +1,25 @@
+<mat-toolbar class="navbar">
+  <span class="spacer"></span>
+    <a [routerLink]="['/']">
+      <mat-icon>sports_bar</mat-icon>
+    </a>
+  <span class="spacer"></span>
+  <div class="example-container">
+    <form [formGroup]="filterForm">
+      <mat-form-field >
+        <input formControlName="name" matInput #input maxlength="10" placeholder="Name">
+      </mat-form-field>
+      <mat-form-field >
+        <input formControlName="state" matInput #input maxlength="10" placeholder="State">
+      </mat-form-field>
+      <mat-form-field >
+        <input formControlName="zipcode" matInput #input maxlength="10" placeholder="Zipcode">
+      </mat-form-field>
+      <mat-form-field >
+        <input formControlName="type" matInput #input maxlength="10" placeholder="type">
+      </mat-form-field>
+        <button  mat-raised-button color="primary">Filter</button>
+    </form>
+  </div>
+</mat-toolbar>
+
