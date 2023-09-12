@@ -46,7 +46,7 @@ import { FilterComponent } from './components/filter/filter.component';
     ReactiveFormsModule,
     AppRoutes,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDbOFq_z8y8u65mPf6-4vUq59MMnoxPSUE'
+      apiKey: 'put key here'
     }),
     // Material
     MatToolbarModule,
